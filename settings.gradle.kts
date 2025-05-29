@@ -1,1 +1,1 @@
-rootProject.name = "sbe-example"
+rootProject.name = "basic-sbe-example"

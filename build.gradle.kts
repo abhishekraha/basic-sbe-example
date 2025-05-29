@@ -27,7 +27,7 @@ dependencies {
 }
 
 sourceSets {
-    main{
+    main {
         java {
             setSrcDirs(
                 listOf(
@@ -40,7 +40,7 @@ sourceSets {
 }
 
 
-tasks.register<JavaExec>("genSources"){
+tasks.register<JavaExec>("genSources") {
     classpath += generatorImplementation
     mainClass.set("uk.co.real_logic.sbe.SbeTool")
     jvmArgs = listOf(
@@ -51,7 +51,7 @@ tasks.register<JavaExec>("genSources"){
     args = schemaList
 }
 
-tasks.compileJava{
+tasks.compileJava {
     dependsOn("genSources")
 }
 
